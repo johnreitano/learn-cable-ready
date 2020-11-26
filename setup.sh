@@ -11,7 +11,7 @@ bundle add cable_ready
 yarn add cable_ready
 bundle exec rails generate channel example
 
-cat > app/assets/stylesheets/applications.subscriptions << DONE
+cat > app/assets/stylesheets/home.scss <<"DONE"
 .big {
     font-size: 30px;
 }
@@ -92,4 +92,3 @@ DONE
 
 
 rails server -p 4000
-
