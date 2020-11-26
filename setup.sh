@@ -76,9 +76,9 @@ class ExampleJob < ApplicationJob
   def perform(*args)
     cable_ready["example-stream"].inner_html(
       selector: "#content",
-      html: "<span id=\”hello\”>a big colorful hello!</span>"
+      html: "<span>a big colorful hello!</span>"
     ).add_css_class(
-      selector: "#hello",
+      selector: "#content",
       name:     ["big", "colorful"]
     ).console_log(
       message: "no bugs so far"
